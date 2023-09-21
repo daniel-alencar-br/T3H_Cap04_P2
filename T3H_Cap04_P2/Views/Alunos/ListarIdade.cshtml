@@ -1,0 +1,40 @@
+﻿@model IEnumerable<T3H_Cap04_P2.Models.Alunos>
+
+@{
+    ViewBag.Title = "ListarIdade";
+}
+
+<h2>ListarIdade</h2>
+
+
+<table class="table" border="1">
+    <tr>
+        <th width="100">
+            @Html.DisplayNameFor(model => model.Codigo)
+        </th>
+        <th width="300">
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th width="150" align="center">
+            @Html.DisplayNameFor(model => model.Idade)
+        </th>
+        
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Idade)
+        </td>
+        
+    </tr>
+}
+
+</table>
